@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = "/add-new-watch")
-public class AddNewWatchServlet extends HttpServlet {
+public class WypelnijServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -21,7 +21,7 @@ public class AddNewWatchServlet extends HttpServlet {
 		response.setContentType("text/html");
 		
 		PrintWriter out = response.getWriter();
-		out.println("<html><body><h2>Add new watch:</h2>" +
+		out.println("<html><body><h2>Prosze uzupelnic pola:</h2>" +
 				"<form action='watch-store'>" +
 				"Producer: <input type='text' name='producer' /> <br />" +
 				"Name: <input type='text' name='name' /> <br />" +
