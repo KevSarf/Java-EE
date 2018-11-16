@@ -16,64 +16,52 @@ public class Watch {
     }
 
     public Watch(String nazwa, String od_kiedy, String do_kiedy , String czestotliwosc, String pole ) {
-        this.id = id;
-        this.producer = producer;
-        this.name= name;
-        this.dateOfProduction = dateOfProduction;
-        this.waterproof = waterproof;
-        this.price = price;
+        this.nazwa = nazwa;
+        this.od_kiedy = od_kiedy;
+        this.do_kiedy= do_kiedy;
+        this.czestotliwosc = czestotliwosc;
+        this.pole = pole;
+
     }
 
-    public int getId() {
-        return id;
+    public String getNazwa() {
+        return nazwa;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setNazwa(String nazwa) {
+        this.nazwa = nazwa;
     }
 
-    public double getPrice() {
-        return price;
+    public String getOd_kiedy() {
+        return od_kiedy;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public void nextId() {
-        id++;
-    }
-
-    public String getProducer() {
-        return producer;
-    }
-
-    public void setProducer(String producer) {
-        this.producer = producer;
+    public void setOd_kiedy(String od_kiedy) {
+        this.od_kiedy = od_kiedy;
     }
     
-    public String getName() {
-        return name;
+    public String getDo_kiedy() {
+        return do_kiedy;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDo_kiedy(String do_kiedy) {
+        this.do_kiedy = do_kiedy;
+    }
+    
+    public String getCzestotliwosc() {
+        return czestotliwosc;
     }
 
-    public Date getDateOfProduction() {
-        return dateOfProduction;
+    public void setCzestotliwosc(String czestotliwosc) {
+        this.czestotliwosc = czestotliwosc;
+    }
+    
+    public String getPole() {
+        return pole;
     }
 
-    public void setDateOfProduction(Date productionDate) {
-        this.dateOfProduction = productionDate;
-    }
-
-    public boolean isWaterproof() {
-        return waterproof;
-    }
-
-    public void setWaterproof(boolean waterproof) {
-        this.waterproof = waterproof;
+    public void setPole(String pole) {
+        this.pole = pole;
     }
 
 }

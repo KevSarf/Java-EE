@@ -7,31 +7,20 @@ import ksarfo.javaee.kolokwium.domain.Watch;
 
 public class StorageService {
 
-    private int id = 0;
     private List<Watch> db = new ArrayList<Watch>();
-    private List<Watch> cart = new ArrayList<Watch>();
+
 
     public void add(Watch watch) {
-    	Watch newWatch = new Watch(watch.getId(), watch.getProducer(), watch.getName(), watch.getDateOfProduction(), watch.isWaterproof(), watch.getPrice());
+    	Watch newWatch = new Watch(watch.getNazwa(), watch.getOd_kiedy(), watch.getDo_kiedy(), watch.getCzestotliwosc(), watch.getPole());
         db.add(newWatch);
     }
 
-    public int getId() {
-        id++;
-
-        return this.id;
-    }
 
     public List<Watch> getAllWatches() {
         return db;
     }
 
-    public void addToCart(Watch watch) {
-        cart.add(watch);
+    public void rmChoosen(Watch newsletter) {
+        db.remove(newsletter);
     }
-
-    public List<Watch> getCart() {
-        return cart;
-    }
-
 }
