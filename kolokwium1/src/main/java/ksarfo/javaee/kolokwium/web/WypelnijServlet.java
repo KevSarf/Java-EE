@@ -1,6 +1,14 @@
 package ksarfo.javaee.kolokwium.web;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/wypelnij")
 public class WypelnijServlet extends HttpServlet {
@@ -13,9 +21,13 @@ public class WypelnijServlet extends HttpServlet {
 		
 		HttpSession sejsa = request.getSession();
 		
-		response.setContentType("text/html");
-		
 		PrintWriter out = response.getWriter();
+		
+		
+		
+		
+		
+		/*
 		out.println("<html><body><h2>Prosze uzupelnic pola:</h2>" +
 				"<form action='watch-store'>" +
 				"Producer: <input type='text' name='producer' /> <br />" +
@@ -30,7 +42,7 @@ public class WypelnijServlet extends HttpServlet {
 				"</form>" +
 				"<br><a href='/zad03'>Menu</a><br>"+
 				"</body></html>");
-		out.close();
+		out.close();*/
 	}
 
 }

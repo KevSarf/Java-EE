@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import ksarfo.javaee.kolokwium.service.StorageService;
 
 @WebServlet(urlPatterns = "/purchase")
-public class PucharseWatchesServlet extends HttpServlet {
+public class PokazWszystkieServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     @Override
