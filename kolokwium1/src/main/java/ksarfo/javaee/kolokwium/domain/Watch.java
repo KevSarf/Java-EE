@@ -1,6 +1,6 @@
 package ksarfo.javaee.kolokwium.domain;
 
-import java.util.Date;
+
 
 public class Watch {
     private String nazwa;
