@@ -27,6 +27,16 @@ public class Watch {
         this.price = price;
         this.description = description;
     }
+    
+    public Watch(Watch watch) {
+    	this.id = watch.getId();
+        this.name = watch.getName();
+        this.producer = watch.getProducer();
+        this.dateOfProduction = watch.getDateOfProduction();
+        this.waterproof = watch.getWaterproof();
+        this.price = watch.getPrice();
+        this.description = watch.getDescription();
+    }
 
     public long getId() {
         return id;
@@ -62,7 +72,7 @@ public class Watch {
         this.dateOfProduction = dateOfProduction;
     }
     
-    public String isWaterproof() {
+    public String getWaterproof() {
         return waterproof;
     }
 
@@ -85,7 +95,7 @@ public class Watch {
     public void setDescription(String description) {
         this.description = description;
     }
-
+///////-----------------------------------------------------????????????????????????
     @Override
     public String toString() {
         return  "id=" + id +

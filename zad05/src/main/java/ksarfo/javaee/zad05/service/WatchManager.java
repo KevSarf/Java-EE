@@ -23,15 +23,30 @@ public class WatchManager {
             }
         }
     }
+    
+/*
+    public void deleteAllWatches(){
+    	for(Watch watch : db) {
+    		db.remove(watch);
+    	}
+    }*/
+    
+        
+    public void deleteAllWatches(){
+    	db.clear();
+    }
+    
 
-    public Watch getWatch(long id) {
+    public Watch getWatch(long id) {			//by id
         for(Watch watch : db) {
-            if(watch.getId() == id) return watch;
+            if(watch.getId() == id) {
+            	return watch;
+            }
         }
         return null;
     }
 
-    public List<Watch> getWatches(String producer) {			//by producer
+    public List<Watch> getWatchesByProducer(String producer) {			//by producer
         List<Watch> watchesList = new ArrayList<>();
 
         for(Watch watch : db) {
@@ -41,19 +56,45 @@ public class WatchManager {
         }
         return watchesList;
     }
+    
+    public List<Watch> getWatchesLTPrice(double price){		//by price low - lower than price
+    	List<Watch> watchesList = new ArrayList<>();
+    	
+    	for(Watch watch : db) {
+    		if(watch.getPrice() <= price) {
+    			watchesList.add(watch);
+    		}
+    	}
+    	return watchesList;
+    }
+    
+    public List<Watch> getWatchesGTPrice(double price){		//by price  - greater than price 
+    	List<Watch> watchesList = new ArrayList<>();
+    	
+    	for(Watch watch : db) {
+    		if(watch.getPrice() >= price) {
+    			watchesList.add(watch);
+    		}
+    	}
+    	return watchesList;
+    }
+    
 
     public List<Watch> getAllWatches() {
         return db;
     }
 
     public Watch updateWatch(Watch upWatch) {
+    	int id = 0;
         for(int i = 0; i < db.size(); i++) {
-            if(db.get(i).getId() == upWatch.getId())
-                db.set(i, upWatch);
+            if(db.get(i).getId() == upWatch.getId()) {
+            	id = i; 
+            	//Watch newData = new Watch(upWatch);
+            }         
         }
+        db.set(id, upWatch);	
         return upWatch;
     }
-
 
 
 }
