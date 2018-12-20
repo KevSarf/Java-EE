@@ -19,7 +19,7 @@
 %>
 
 
-<h1>Tank you for purchase:</h1>
+<h1>Tank you for purchase</h1>
 
 <%
 			cart.cartClear();
