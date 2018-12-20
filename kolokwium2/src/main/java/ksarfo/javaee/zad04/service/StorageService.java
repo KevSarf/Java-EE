@@ -12,7 +12,7 @@ public class StorageService {
     private List<Phone> cart = new ArrayList<Phone>();
 
     public void add(Phone phone) {
-    	Phone newPhone = new Phone(phone.getId(), phone.getDataProd(), phone.getOpinia(), phone.getExtra(), phone.getPrice());
+    	Phone newPhone = new Phone(phone.getId(), phone.getName(), phone.getDataProd(), phone.getOpinia(), phone.getExtra(), phone.getPrice());
         db.add(newPhone);
     }
 

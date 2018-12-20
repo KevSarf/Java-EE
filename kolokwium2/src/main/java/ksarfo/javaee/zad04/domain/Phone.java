@@ -6,6 +6,7 @@ public class Phone {
 	
 	private long id;
 	private String dataProd;
+	private String name;
 	private String opinia;
 	private String extra ="";
 	private double price;
@@ -14,9 +15,10 @@ public class Phone {
 
 	}
 	
-	public Phone(long id, String  dataProd, String opinia, String extra, Double price) {
+	public Phone(long id, String name, String  dataProd, String opinia, String extra, Double price) {
 		this.id = id;
 		this.dataProd=dataProd;
+		this.name = name;
 		this.opinia = opinia;
 		this.extra = extra;
 		this.price = price;		
@@ -36,6 +38,14 @@ public class Phone {
 	
 	public void setDataProd(String  dataProd) {
 		this.dataProd = dataProd;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String  name) {
+		this.name = name;
 	}
 	
 	public String getOpinia() {

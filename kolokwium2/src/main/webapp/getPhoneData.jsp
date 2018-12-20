@@ -9,16 +9,25 @@
 <body>
 
 <jsp:useBean id="storage" class="ksarfo.javaee.zad04.service.StorageService" scope="application" />
-<jsp:useBean id="watch" class="ksarfo.javaee.zad04.domain.Phone" scope="session" />
+<jsp:useBean id="phone" class="ksarfo.javaee.zad04.domain.Phone" scope="session" />
 
 <form action="addNewPhone.jsp">
 
     <!--Id: <input type="text" name="id" value="${watch.id}" /><br />  -->
-    Production date: <input type="date"  name="dataProd" value="${watch.dateOfProduction}" /><br />
-    Name:            <input type="text" name="name" value="${watch.name}" /><br />
-    Waterproof:      <input type="checkbox" name="waterproof" value="${watch.waterproof}" /><br />
-    Producer:        <input type="text" name="producer" value="${watch.producer}" /><br />
-    Price:           <input type="text" name="price" value="${watch.price}" /><br />
+    Data produkcji: <input type="date"  name="dataProd" value="${watch.dateOfProduction}" /><br />
+    Nazwa modelu:            <input type="text" name="name" value="${phone.name}" /><br />
+    Ocena:<br />  	1<input type="radio" name="opinia" value="${phone.opinia}" />
+    				|2<input type="radio" name="opinia" value="${phone.opinia}" />
+    				|3<input type="radio" name="opinia" value="${phone.opinia}" />
+    				|4<input type="radio" name="opinia" value="${phone.opinia}" />
+    				|5<input type="radio" name="opinia" value="${phone.opinia}" /><br />
+    
+    
+    Extra:  <br />        <input type="checkbox" name="extra" value="|Wodoodporny|" />Wodoodporny<br />
+    				<input type="checkbox" name="extra" value="|Wstrząsoodporny|" />Wstrząsoodporny<br />
+    				<input type="checkbox" name="extra" value="|Izotermiczny|" />Izotermiczny<br />
+    				
+    Cena:           <input type="double" name="price" value="${watch.price}" /><br />
     
     <input type="submit" value=" Add ">
     
