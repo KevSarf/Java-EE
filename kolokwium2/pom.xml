@@ -48,7 +48,7 @@
 
 	</dependencies>
 	<build>
-		<finalName>zad04</finalName>
+		<finalName>kolokwium2</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -83,6 +83,6 @@
 		</plugins>
 	</build>
 
-	<artifactId>zad04</artifactId>
+	<artifactId>kolokwium2</artifactId>
 </project>
 

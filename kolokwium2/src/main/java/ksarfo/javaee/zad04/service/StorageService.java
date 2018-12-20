@@ -3,17 +3,17 @@ package ksarfo.javaee.zad04.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import ksarfo.javaee.zad04.domain.Watch;
+import ksarfo.javaee.zad04.domain.Phone;
 
 public class StorageService {
 
     private long id = 0;
-    private List<Watch> db = new ArrayList<Watch>();
-    private List<Watch> cart = new ArrayList<Watch>();
+    private List<Phone> db = new ArrayList<Phone>();
+    private List<Phone> cart = new ArrayList<Phone>();
 
-    public void add(Watch watch) {
-    	Watch newWatch = new Watch(watch.getId(), watch.getProducer(), watch.getName(), watch.getDateOfProduction(), watch.isWaterproof(), watch.getPrice());
-        db.add(newWatch);
+    public void add(Phone phone) {
+    	Phone newPhone = new Phone(phone.getId(), phone.getDataProd(), phone.getOpinia(), phone.getExtra(), phone.getPrice());
+        db.add(newPhone);
     }
 
     public long getId() {
@@ -22,8 +22,8 @@ public class StorageService {
         return this.id;
     }
 
-    public Watch getWatch(long id) {    	
-    	for(Watch watch : db) {
+    public Phone getWatch(long id) {    	
+    	for(Phone watch : db) {
     		if(watch.getId()== id) {
     			return watch;
     		}
@@ -31,11 +31,11 @@ public class StorageService {
     	return null;
     }
     
-    public List<Watch> getAllWatches() {
+    public List<Phone> getAllPhones() {
         return db;
     }
 
-    public List<Watch> cartClear() {
+    public List<Phone> cartClear() {
    
     	cart.clear();    	
     	return cart;

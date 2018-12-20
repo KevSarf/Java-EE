@@ -16,9 +16,9 @@
         <title>Shop</title>
     </head>
     <body>
-        <h2>Watch store</h2>
-        <p><a href="getWatchData.jsp"><input type='submit' value = 'Add a new watch'/></a></p>
-        <p><a href="showAllWatches.jsp"><input type='submit' value = 'Show all watches'/></a></p>
+        <h2>Phone store</h2>
+        <p><a href="getPhoneData.jsp"><input type='submit' value = 'Add a new phone'/></a></p>
+        <p><a href="showAllPhones.jsp"><input type='submit' value = 'Show all phones'/></a></p>
         <p><a href="cart.jsp"><input type='submit' value = 'Cart'/></a></p>
         
     </body>

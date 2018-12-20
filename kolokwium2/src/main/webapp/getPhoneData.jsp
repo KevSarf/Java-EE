@@ -9,12 +9,12 @@
 <body>
 
 <jsp:useBean id="storage" class="ksarfo.javaee.zad04.service.StorageService" scope="application" />
-<jsp:useBean id="watch" class="ksarfo.javaee.zad04.domain.Watch" scope="session" />
+<jsp:useBean id="watch" class="ksarfo.javaee.zad04.domain.Phone" scope="session" />
 
-<form action="addNewWatch.jsp">
+<form action="addNewPhone.jsp">
 
     <!--Id: <input type="text" name="id" value="${watch.id}" /><br />  -->
-    Production date: <input type="date"  name="dateOfProduction" value="${watch.dateOfProduction}" /><br />
+    Production date: <input type="date"  name="dataProd" value="${watch.dateOfProduction}" /><br />
     Name:            <input type="text" name="name" value="${watch.name}" /><br />
     Waterproof:      <input type="checkbox" name="waterproof" value="${watch.waterproof}" /><br />
     Producer:        <input type="text" name="producer" value="${watch.producer}" /><br />
