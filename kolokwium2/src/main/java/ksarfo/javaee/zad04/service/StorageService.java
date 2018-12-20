@@ -35,10 +35,10 @@ public class StorageService {
         return db;
     }
 
-    public List<Phone> cartClear() {
-   
+    public void cartClear() {
+    	
     	cart.clear();    	
-    	return cart;
+    	
     }
     
     

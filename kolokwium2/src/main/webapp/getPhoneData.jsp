@@ -16,11 +16,11 @@
     <!--Id: <input type="text" name="id" value="${watch.id}" /><br />  -->
     Data produkcji: <input type="date"  name="dataProd" value="${watch.dateOfProduction}" /><br />
     Nazwa modelu:            <input type="text" name="name" value="${phone.name}" /><br />
-    Ocena:<br />  	1<input type="radio" name="opinia" value="${phone.opinia}" />
-    				|2<input type="radio" name="opinia" value="${phone.opinia}" />
-    				|3<input type="radio" name="opinia" value="${phone.opinia}" />
-    				|4<input type="radio" name="opinia" value="${phone.opinia}" />
-    				|5<input type="radio" name="opinia" value="${phone.opinia}" /><br />
+    Ocena:<br />  	1<input type="radio" name="opinia" value="1" />
+    				|2<input type="radio" name="opinia" value="2" />
+    				|3<input type="radio" name="opinia" value="3" />
+    				|4<input type="radio" name="opinia" value="4" />
+    				|5<input type="radio" name="opinia" value="5" /><br />
     
     
     Extra:  <br />        <input type="checkbox" name="extra" value="|Wodoodporny|" />Wodoodporny<br />

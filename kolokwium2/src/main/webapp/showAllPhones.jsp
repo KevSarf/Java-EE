@@ -11,12 +11,12 @@
 
 <jsp:useBean id="storage" class="ksarfo.javaee.zad04.service.StorageService" scope="application" />
 <%
-  for (Watch watch : storage.getAllWatches()) {
-	  out.println("<div><p><b>Id:</b> " + watch.getId() + ";<b> Production date</b>: " + watch.getDateOfProduction() + "</p>");
-	  out.println("<p><b>Name</b>: " + watch.getName() + "; <b>Waterproof</b>: " + watch.isWaterproof() + "</p>");
-      out.println("<p><b>Producer</b>: " + watch.getProducer() + ";<b> Price</b>: " + watch.getPrice() + "</p>");
+  for (Phone phone : storage.getAllPhones()) {
+ 	 out.println("<div><p><b>Id:</b> " + phone.getId() + "</p><p><b> Data produkcji</b>: " + phone.getDataProd() + "</p>");
+	 	 out.println("<p><b>Nazwa</b>: " + phone.getName() + "</p><p><b>Opinia</b>: " + phone.getOpinia() + "</p>");
+     out.println("<p><b>Extra</b>: " + phone.getExtra() + "</p><p><b> Cena</b>: " + phone.getPrice() + "</p>");
       out.println("<form action='cart.jsp' method='post'>" +
-              "<input name='id' hidden value='" + watch.getId() + "' />" +
+              "<input name='id' hidden value='" + phone.getId() + "' />" +
               "<input type='submit' value=' Add to cart ' />" +
               "</form>"+"</div>");
       out.println();
